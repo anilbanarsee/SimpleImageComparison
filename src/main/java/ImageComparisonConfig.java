@@ -4,8 +4,10 @@ public class ImageComparisonConfig {
 
     private float pixelRgbThreshold = 0.2f;
     private int maxSearchDistance = 5;
+    private int maxPixelUsage = 1;
     private int maxComparisonBoxWidth = 100;
     private int maxComparisonBoxHeight = 50;
+    private float percentageAllowedDifferent = 0.00005f;
     private Color comparisonBoxColor = Color.RED;
 
     public float getPixelRgbThreshold() {
@@ -52,4 +54,22 @@ public class ImageComparisonConfig {
         this.comparisonBoxColor = comparisonBoxColor;
         return this;
     }
+
+  public int getMaxPixelUsage() {
+    return maxPixelUsage;
+  }
+
+  public ImageComparisonConfig setMaxPixelUsage(int maxPixelUsage) {
+    this.maxPixelUsage = maxPixelUsage;
+    return this;
+  }
+
+  public float getPercentageAllowedDifferent() {
+    return percentageAllowedDifferent;
+  }
+
+  public ImageComparisonConfig setPercentageAllowedDifferent(float percentageAllowedDifferent) {
+    this.percentageAllowedDifferent = percentageAllowedDifferent;
+    return this;
+  }
 }
